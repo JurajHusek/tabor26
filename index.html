@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#18332f">
+  <title>Exkurzia do Múzea hodín Brestovec</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="#" aria-label="Tábor 2026">
+      <img src="nodam.png" alt="Tábor 2026">
+      <span><b>#TÁBOR</b><small>2026</small></span>
+    </a>
+  </header>
+
+  <main>
+    <section class="event">
+      <h1>Exkurzia do Múzea hodín Brestovec<br><span>začína už o:</span></h1>
+
+      <div class="countdown" role="timer" aria-label="Odpočítavanie do exkurzie">
+        <div><strong id="days">00</strong><span>dní</span></div>
+        <i>:</i>
+        <div><strong id="hours">00</strong><span>hodín</span></div>
+        <i>:</i>
+        <div><strong id="minutes">00</strong><span>minút</span></div>
+        <i>:</i>
+        <div><strong id="seconds">00</strong><span>sekúnd</span></div>
+      </div>
+
+      <p id="arrival-message" hidden>Exkurzia sa práve začína!</p>
+
+      <div class="clock-block">
+        <div class="clock" aria-label="Aktuálny čas CEST">
+          <div id="minute-marks" aria-hidden="true"></div>
+          <span class="number n12">12</span><span class="number n3">3</span>
+          <span class="number n6">6</span><span class="number n9">9</span>
+          <div class="hand hour" id="hour-hand"></div>
+          <div class="hand minute" id="minute-hand"></div>
+          <div class="hand second" id="second-hand"></div>
+          <div class="pin"></div>
+        </div>
+        <div class="current-time"><b id="digital-time">--:--:--</b><span>aktuálny čas v Holíči</span></div>
+        <a class="instagram-link" href="https://www.instagram.com/nodam_holic/" target="_blank" rel="noopener noreferrer" aria-label="Sleduj nás na Instagrame">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle class="instagram-dot" cx="17.5" cy="6.5" r="1"/>
+          </svg>
+          <span>Sleduj nás na <b>Instagrame</b></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 NODAM - Stredisko Holíč</footer>
+  <script src="script.js"></script>
+</body>
+</html>
