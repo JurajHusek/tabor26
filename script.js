@@ -46,6 +46,27 @@ for (let i = 0; i < 60; i += 1) {
   marks.appendChild(mark);
 }
 
+const hintModal = document.querySelector('#hint-modal');
+const hintOpen = document.querySelector('.hint-open');
+const hintClose = document.querySelector('.hint-close');
+
+function closeHintModal() {
+  hintModal.classList.remove('is-open');
+}
+
+function openHintModal() {
+  hintModal.classList.add('is-open');
+}
+
+hintOpen.addEventListener('click', openHintModal);
+hintClose.addEventListener('click', closeHintModal);
+hintModal.addEventListener('click', event => {
+  if (event.target === hintModal) closeHintModal();
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeHintModal();
+});
+
 updateCountdown();
 updateClock();
 setInterval(updateCountdown, 1000);
