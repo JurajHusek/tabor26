@@ -44,7 +44,9 @@
           <div class="hand second" id="second-hand"></div>
           <div class="pin"></div>
         </div>
+
         <div class="current-time"><b id="digital-time">--:--:--</b><span>aktuálny čas v Holíči</span></div>
+
         <a class="instagram-link" href="https://www.instagram.com/nodam_holic/" target="_blank" rel="noopener noreferrer" aria-label="Sleduj nás na Instagrame">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="3" y="3" width="18" height="18" rx="5"/>
@@ -53,18 +55,22 @@
           </svg>
           <span>Sleduj nás na <b>Instagrame</b></span>
         </a>
-		<a class="instagram-link" href="https://jurajhusek.github.io/tabor26/" target="_blank" rel="noopener noreferrer" aria-label="">
-          
-          <span><b>Nemáš Instagram?</b> Každý deň si načítaj QR kód pre "hinty" o Tábore!</span>
+
+        <a class="instagram-link" href="https://jurajhusek.github.io/tabor26/" target="_blank" rel="noopener noreferrer">
+          <span><b>Nemáš Instagram?</b> Každý deň si načítaj QR kód pre „hinty“ o Tábore!</span>
         </a>
-        <button class="hint-open" type="button" aria-controls="hint-modal">Hint#1 - Tábor 2026</button>
+
+        <div class="hint-buttons">
+          <button class="hint-open" type="button" aria-controls="hint-modal" data-hint-title="Hint#1 - Tábor 2026" data-hint-image="hint1.jpeg">Hint#1 - Tábor 2026</button>
+          <button class="hint-open" type="button" aria-controls="hint-modal" data-hint-title="Hint#2 - Tábor 2026" data-hint-image="hint2.jpeg">Hint#2 - Tábor 2026</button>
+        </div>
       </div>
 
       <div class="hint-modal is-open" id="hint-modal" role="dialog" aria-modal="true" aria-labelledby="hint-title">
         <div class="hint-card">
           <button class="hint-close" type="button" aria-label="Zatvoriť hint">&times;</button>
-          <h2 id="hint-title">Hint#1 - Tábor 2026</h2>
-          <img src="hint1.jpeg" alt="Hint#1 - Tábor 2026">
+          <h2 id="hint-title">Hint#2 - Tábor 2026</h2>
+          <img id="hint-image" src="hint2.jpeg" alt="Hint#2 - Tábor 2026">
         </div>
       </div>
     </section>

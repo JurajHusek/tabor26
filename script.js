@@ -47,18 +47,27 @@ for (let i = 0; i < 60; i += 1) {
 }
 
 const hintModal = document.querySelector('#hint-modal');
-const hintOpen = document.querySelector('.hint-open');
+const hintOpenButtons = document.querySelectorAll('.hint-open');
 const hintClose = document.querySelector('.hint-close');
+const hintTitle = document.querySelector('#hint-title');
+const hintImage = document.querySelector('#hint-image');
 
 function closeHintModal() {
   hintModal.classList.remove('is-open');
 }
 
-function openHintModal() {
+function openHintModal(button) {
+  if (button) {
+    hintTitle.textContent = button.dataset.hintTitle;
+    hintImage.src = button.dataset.hintImage;
+    hintImage.alt = button.dataset.hintTitle;
+  }
   hintModal.classList.add('is-open');
 }
 
-hintOpen.addEventListener('click', openHintModal);
+hintOpenButtons.forEach(button => {
+  button.addEventListener('click', () => openHintModal(button));
+});
 hintClose.addEventListener('click', closeHintModal);
 hintModal.addEventListener('click', event => {
   if (event.target === hintModal) closeHintModal();
